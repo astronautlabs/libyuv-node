@@ -13,6 +13,19 @@ libyuv is an open source project that includes YUV scaling and conversion functi
 
 For more information about `libyuv`, visit Google's site at https://chromium.googlesource.com/libyuv/libyuv/
 
+## Installation 
+
+First, [download and install cmake](https://cmake.org/download/) and make sure it 
+is available in your `PATH`.
+
+Then:
+```
+npm install libyuv
+```
+
+You will need `cmake` available on any system (such as CI) which builds your 
+project, as there are no prebuilt binaries yet.
+
 ## Why?
 
 If you are processing video frames in Node.js, you may need to convert the color space
