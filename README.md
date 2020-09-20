@@ -11,7 +11,7 @@ libyuv is an open source project that includes YUV scaling and conversion functi
 - Optimized for Neon on Arm.
 - Optimized for MSA on Mips.
 
-For more information about libyuv, visit Google's site at https://chromium.googlesource.com/libyuv/libyuv/
+For more information about `libyuv`, visit Google's site at https://chromium.googlesource.com/libyuv/libyuv/
 
 ## Why?
 
