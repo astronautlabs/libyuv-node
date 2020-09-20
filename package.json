@@ -1,0 +1,26 @@
+{
+  "name": "libyuv",
+  "version": "0.0.1",
+  "keywords": ["video", "yuv", "conversion", "frames"],
+  "description": "Bindings to libyuv, provides conversion utilities for in-memory YUV video frames",
+  "repository": {
+    "url": "https://github.com/astronautlabs/libyuv-node"
+  },
+  "main": "index.js",
+  "scripts": {
+    "libyuv:build": "node scripts/libyuv-build.js",
+    "libyuv:clean": "rimraf external/libyuv",
+    "clean": "npm run libyuv:clean && rimraf build",
+    "rebuild": "node-gyp rebuild",
+    "build": "npm run libyuv:build && npm run rebuild",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Astronaut Labs",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "node-addon-api": "*"
+  }
+}
