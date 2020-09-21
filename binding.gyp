@@ -42,7 +42,7 @@
                     {
                         'link_settings' : {
                             "libraries": [
-                                "<(module_root_dir)/external/yuv.a"
+                                "<(module_root_dir)/external/libyuv.a"
                             ],
                             "ldflags" : [
                                 "-lm -ldl -lpthread"

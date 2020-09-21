@@ -1,13 +1,10 @@
-const { exec } = require('child_process');
+const { spawn } = require('child_process');
+const path = require('path');
 
-if (process.platform === 'win32') {
-    exec(require.resolve('./libyuv-build.bat'), (error, stdout, stderr) => {
-        if (error) {
-            console.error(`failed to build libyuv:`);
-            console.error(stderr);
-            process.exit(1);
-        } else {
-            process.exit(0);
-        }
-    });
-}
+
+let script = 'scripts/libyuv-build.sh';
+if (process.platform === 'win32')
+    script = script.replace(/\.sh$/, '.bat');
+console.log(`> ${script}`);
+script = path.resolve(path.join(__dirname, '..', script));
+spawn(script, { stdio: 'inherit'});
