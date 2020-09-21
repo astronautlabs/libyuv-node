@@ -17,6 +17,12 @@
 Napi::Value I444ToI420(const Napi::CallbackInfo&);
 
 /** 
+ * Convert I444 to NV12.
+ * Usage: 
+ */
+Napi::Value I444ToNV12(const Napi::CallbackInfo&);
+
+/** 
  * Convert I444 to NV21.
  * Usage: 
  */
