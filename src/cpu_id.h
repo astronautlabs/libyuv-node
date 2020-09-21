@@ -1,3 +1,4 @@
+#include <napi.h>
 
 Napi::Value InitCpuFlags(const Napi::CallbackInfo&);
 Napi::Value TestCpuFlag(const Napi::CallbackInfo&);

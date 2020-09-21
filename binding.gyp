@@ -8,8 +8,11 @@
             ],
             'sources' : [
                 "src/init.cc",
+                "src/version.cc",
                 "src/convert.cc",
-                "src/convert_argb.cc"
+                "src/convert_argb.cc",
+                "src/scale.cc",
+                "src/cpu_id.cc"
             ],
             'cflags!': [ '-fno-exceptions' ],
             'cflags_cc!': [ '-fno-exceptions' ],
