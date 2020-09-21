@@ -7,9 +7,9 @@
                 "external/libyuv/include"
             ],
             'sources' : [
-                "src/yuvlib.cc",
-                "src/i420_util.cc",
-                "src/rgba_util.cc"
+                "src/init.cc",
+                "src/convert.cc",
+                "src/convert_argb.cc"
             ],
             'cflags!': [ '-fno-exceptions' ],
             'cflags_cc!': [ '-fno-exceptions' ],
