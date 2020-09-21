@@ -3,7 +3,7 @@
 
 template<typename T, size_t N>
 void copy_to_array(T (&dest)[N], T *src) {
-    for (uint i = 0; i < N; ++i)
+    for (unsigned int i = 0; i < N; ++i)
         dest[i] = src[i];
 }
 
