@@ -9,6 +9,7 @@
   "main": "binding.js",
   "types": "binding.d.ts",
   "scripts": {
+    "install": "npm run libyuv:build && npm run rebuild",
     "libyuv:build": "node scripts/libyuv-build.js",
     "libyuv:clean": "rimraf external/libyuv",
     "clean": "npm run libyuv:clean && rimraf build",
