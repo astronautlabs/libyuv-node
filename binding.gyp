@@ -14,7 +14,8 @@
                 "src/scale.cc",
                 "src/scale_argb.cc",
                 "src/cpu_id.cc",
-                "src/rotate.cc"
+                "src/rotate.cc",
+                "src/rotate_argb.cc"
             ],
             'cflags!': [ '-fno-exceptions' ],
             'cflags_cc!': [ '-fno-exceptions' ],
