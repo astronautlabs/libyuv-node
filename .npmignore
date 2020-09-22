@@ -1,0 +1,4 @@
+node_modules/
+external/
+build/
+debug.log
