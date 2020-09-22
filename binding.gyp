@@ -13,7 +13,8 @@
                 "src/convert_argb.cc",
                 "src/scale.cc",
                 "src/scale_argb.cc",
-                "src/cpu_id.cc"
+                "src/cpu_id.cc",
+                "src/rotate.cc"
             ],
             'cflags!': [ '-fno-exceptions' ],
             'cflags_cc!': [ '-fno-exceptions' ],
