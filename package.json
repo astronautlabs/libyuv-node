@@ -6,7 +6,8 @@
   "repository": {
     "url": "https://github.com/astronautlabs/libyuv-node"
   },
-  "main": "index.js",
+  "main": "binding.js",
+  "types": "binding.d.ts",
   "scripts": {
     "libyuv:build": "node scripts/libyuv-build.js",
     "libyuv:clean": "rimraf external/libyuv",
