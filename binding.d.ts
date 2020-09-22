@@ -1034,18 +1034,18 @@ declare module "binding" {
         height: number
     ): number;
 
-    /** src_width/height provided by capture */
-    /** dst_width/height for clipping determine final size. */
-    export function MJPGToARGB(
-        sample: Uint8Array,
-        sample_size: number,
-        dst_argb: Uint8Array,
-        dst_stride_argb: number,
-        src_width: number,
-        src_height: number,
-        dst_width: number,
-        dst_height: number
-    ): number;
+    // /** src_width/height provided by capture */
+    // /** dst_width/height for clipping determine final size. */
+    // export function MJPGToARGB(
+    //     sample: Uint8Array,
+    //     sample_size: number,
+    //     dst_argb: Uint8Array,
+    //     dst_stride_argb: number,
+    //     src_width: number,
+    //     src_height: number,
+    //     dst_width: number,
+    //     dst_height: number
+    // ): number;
 
     /** Convert Android420 to ARGB. */
     export function Android420ToARGB(
@@ -2150,46 +2150,46 @@ declare module "binding" {
         height: number
     ): number;
 
-    /** 
-     * src_width/height provided by capture.
-     * dst_width/height for clipping determine final size. 
-     */
-    export function MJPGToI420(
-        sample: Uint8Array,
-        sample_size: number,
-        dst_y: Uint8Array,
-        dst_stride_y: number,
-        dst_u: Uint8Array,
-        dst_stride_u: number,
-        dst_v: Uint8Array,
-        dst_stride_v: number,
-        src_width: number,
-        src_height: number,
-        dst_width: number,
-        dst_height: number
-    ): number;
+    // /** 
+    //  * src_width/height provided by capture.
+    //  * dst_width/height for clipping determine final size. 
+    //  */
+    // export function MJPGToI420(
+    //     sample: Uint8Array,
+    //     sample_size: number,
+    //     dst_y: Uint8Array,
+    //     dst_stride_y: number,
+    //     dst_u: Uint8Array,
+    //     dst_stride_u: number,
+    //     dst_v: Uint8Array,
+    //     dst_stride_v: number,
+    //     src_width: number,
+    //     src_height: number,
+    //     dst_width: number,
+    //     dst_height: number
+    // ): number;
 
-    /** JPEG to NV21 */
-    export function MJPGToNV21(
-        sample: Uint8Array,
-        sample_size: number,
-        dst_y: Uint8Array,
-        dst_stride_y: number,
-        dst_vu: Uint8Array,
-        dst_stride_vu: number,
-        src_width: number,
-        src_height: number,
-        dst_width: number,
-        dst_height: number
-    ): number;
+    // /** JPEG to NV21 */
+    // export function MJPGToNV21(
+    //     sample: Uint8Array,
+    //     sample_size: number,
+    //     dst_y: Uint8Array,
+    //     dst_stride_y: number,
+    //     dst_vu: Uint8Array,
+    //     dst_stride_vu: number,
+    //     src_width: number,
+    //     src_height: number,
+    //     dst_width: number,
+    //     dst_height: number
+    // ): number;
 
-    /** Query size of MJPG in pixels. */
-    export function MJPGSize(
-        sample: Uint8Array,
-        sample_size: number,
-        width: Int32Array,
-        height: Int32Array
-    ): number;
+    // /** Query size of MJPG in pixels. */
+    // export function MJPGSize(
+    //     sample: Uint8Array,
+    //     sample_size: number,
+    //     width: Int32Array,
+    //     height: Int32Array
+    // ): number;
 
     /** 
      * Convert camera sample to I420 with cropping, rotation and vertical flip.

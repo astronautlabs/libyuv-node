@@ -137,12 +137,6 @@ Napi::Value AYUVToNV12(const Napi::CallbackInfo&);
 Napi::Value AYUVToNV21(const Napi::CallbackInfo&);
 
 /** 
- * Convert M420 to I420.
- * Usage: 
- */
-Napi::Value M420ToI420(const Napi::CallbackInfo&);
-
-/** 
  * Convert Android420 to I420.
  * Usage: 
  */

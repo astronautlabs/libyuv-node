@@ -8,6 +8,7 @@
 #include "scale_argb.h"
 #include "scale.h"
 #include "version.h"
+#include "config.h"
 
 void Init(Napi::Env env, Napi::Object exports) {
     
@@ -28,7 +29,6 @@ void Init(Napi::Env env, Napi::Object exports) {
     exports.Set("UYVYToI420", Napi::Function::New(env, UYVYToI420));
     exports.Set("AYUVToNV12", Napi::Function::New(env, AYUVToNV12));
     exports.Set("AYUVToNV21", Napi::Function::New(env, AYUVToNV21));
-    exports.Set("M420ToI420", Napi::Function::New(env, M420ToI420));
     exports.Set("Android420ToI420", Napi::Function::New(env, Android420ToI420));
     exports.Set("ARGBToI420", Napi::Function::New(env, ARGBToI420));
     exports.Set("BGRAToI420", Napi::Function::New(env, BGRAToI420));
@@ -42,9 +42,12 @@ void Init(Napi::Env env, Napi::Object exports) {
     exports.Set("ARGB4444ToI420", Napi::Function::New(env, ARGB4444ToI420));
     exports.Set("RGB24ToJ400", Napi::Function::New(env, RGB24ToJ400));
     exports.Set("RAWToJ400", Napi::Function::New(env, RAWToJ400));
+    
+#ifdef HAVE_JPEG
     exports.Set("MJPGToI420", Napi::Function::New(env, MJPGToI420));
     exports.Set("MJPGToNV21", Napi::Function::New(env, MJPGToNV21));
     exports.Set("MJPGSize", Napi::Function::New(env, MJPGSize));
+#endif
     exports.Set("ConvertToI420", Napi::Function::New(env, ConvertToI420));
 
     // convert_argb.cc
@@ -98,7 +101,6 @@ void Init(Napi::Env env, Napi::Object exports) {
     exports.Set("NV21ToYUV24", Napi::Function::New(env, NV21ToYUV24));
     exports.Set("NV12ToRAW", Napi::Function::New(env, NV12ToRAW));
     exports.Set("NV21ToRAW", Napi::Function::New(env, NV21ToRAW));
-    exports.Set("M420ToARGB", Napi::Function::New(env, M420ToARGB));
     exports.Set("YUY2ToARGB", Napi::Function::New(env, YUY2ToARGB));
     exports.Set("UYVYToARGB", Napi::Function::New(env, UYVYToARGB));
     exports.Set("I010ToAR30", Napi::Function::New(env, I010ToAR30));
@@ -125,7 +127,11 @@ void Init(Napi::Env env, Napi::Object exports) {
     exports.Set("AR30ToARGB", Napi::Function::New(env, AR30ToARGB));
     exports.Set("AR30ToABGR", Napi::Function::New(env, AR30ToABGR));
     exports.Set("AR30ToAB30", Napi::Function::New(env, AR30ToAB30));
+    
+#ifdef HAVE_JPEG
     exports.Set("MJPGToARGB", Napi::Function::New(env, MJPGToARGB));
+#endif
+
     exports.Set("Android420ToARGB", Napi::Function::New(env, Android420ToARGB));
     exports.Set("Android420ToABGR", Napi::Function::New(env, Android420ToABGR));
     exports.Set("NV12ToRGB565", Napi::Function::New(env, NV12ToRGB565));

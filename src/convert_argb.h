@@ -11,6 +11,7 @@
 #include <napi.h>
 #include <libyuv/basic_types.h>
 #include <libyuv/rotate.h>  // For enum RotationMode.
+#include "config.h"
 
 // Alias.
 #define ARGBToARGB ARGBCopy
@@ -273,11 +274,6 @@ Napi::Value NV12ToRAW(const Napi::CallbackInfo& info);
 Napi::Value NV21ToRAW(const Napi::CallbackInfo& info);
 
 /**
- * Convert M420 to ARGB.
- */
-Napi::Value M420ToARGB(const Napi::CallbackInfo& info);
-
-/**
  * Convert YUY2 to ARGB.
  */
 Napi::Value YUY2ToARGB(const Napi::CallbackInfo& info);
@@ -421,11 +417,13 @@ Napi::Value AR30ToABGR(const Napi::CallbackInfo& info);
  */
 Napi::Value AR30ToAB30(const Napi::CallbackInfo& info);
 
+#ifdef HAVE_JPEG
 /** 
  * src_width/height provided by capture
  * dst_width/height for clipping determine final size.
  */
 Napi::Value MJPGToARGB(const Napi::CallbackInfo& info);
+#endif
 
 /**
  * Convert Android420 to ARGB.

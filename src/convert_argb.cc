@@ -1,5 +1,6 @@
 #include <libyuv.h>
 #include "convert_argb.h"
+#include "config.h"
 
 template<typename T, size_t N>
 void copy_to_array(T (&dest)[N], T *src) {
@@ -1932,6 +1933,8 @@ Napi::Value AR30ToAB30(const Napi::CallbackInfo& info) {
     return Napi::Number::New(info.Env(), retval);
 }
 
+#ifdef HAVE_JPEG
+
 Napi::Value MJPGToARGB(const Napi::CallbackInfo& info) {
     auto sample              = info[0]   .As<Napi::Uint8Array>() ;
     auto sample_size         = info[1]   .As<Napi::Number>()     .Int32Value();
@@ -1955,6 +1958,8 @@ Napi::Value MJPGToARGB(const Napi::CallbackInfo& info) {
 
     return Napi::Number::New(info.Env(), retval);
 }
+
+#endif 
 
 // TODO BELOW
 

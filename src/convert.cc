@@ -1,5 +1,6 @@
 #include <libyuv.h>
 #include "convert.h"
+#include "config.h"
 
 Napi::Value I444ToI420(const Napi::CallbackInfo& info) {
     auto src_y          = info[0].As<Napi::Uint8Array>();
@@ -846,6 +847,8 @@ Napi::Value RAWToJ400(const Napi::CallbackInfo& info) {
     return Napi::Number::New(info.Env(), retval);
 }
 
+#ifdef HAVE_JPEG
+
 Napi::Value MJPGToI420(const Napi::CallbackInfo& info) {
     auto sample         = info[0].As<Napi::Uint8Array>();
     auto sample_size    = info[1].As<Napi::Number>().Int32Value();
@@ -926,6 +929,8 @@ Napi::Value MJPGSize(const Napi::CallbackInfo& info) {
 
     return obj;
 }
+
+#endif 
 
 Napi::Value ConvertToI420(const Napi::CallbackInfo& info) {
     auto sample         = info[0].As<Napi::Uint8Array>();
