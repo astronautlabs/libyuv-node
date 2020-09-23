@@ -17,7 +17,7 @@
     "install": "npm run libyuv:build && npm run rebuild",
     "libyuv:build": "node scripts/libyuv-build.js",
     "libyuv:clean": "rimraf external/libyuv",
-    "clean": "npm run libyuv:clean && rimraf build",
+    "clean": "npm run libyuv:clean && rimraf build && rimraf dist",
     "rebuild": "node-gyp rebuild",
     "build": "npm run libyuv:build && npm run rebuild",
     "prepublish": "npm run ts:build",
