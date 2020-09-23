@@ -1,5 +1,4 @@
-echo "Current PATH:"
-echo %PATH%
+set PATH="%PATH%;C:\\Program Files\\CMake\\bin"
 
 mkdir external
 cd external
