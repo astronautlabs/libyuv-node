@@ -9,6 +9,7 @@ commands:
       version:
         type: string
     steps:
+      - apt install cmake
       - checkout
       - restore_cache:
           keys:
