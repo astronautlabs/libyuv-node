@@ -1,3 +1,6 @@
+echo "Current PATH:"
+echo %PATH%
+
 mkdir external
 cd external
 git clone https://chromium.googlesource.com/libyuv/libyuv
