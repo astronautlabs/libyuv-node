@@ -2,6 +2,7 @@
 echo "ENVIRONMENT:"
 set
 
+set PATH=
 set Path=%Path%C:\\Program Files\\CMake\\bin;
 
 mkdir external
