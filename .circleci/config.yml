@@ -22,6 +22,13 @@ commands:
           key: v1-dependencies-<< parameters.version >>-{{ checksum "package.json" }}
       - run: npm test
 jobs:
+  windows-node-12:
+    executor:
+      name: win/default
+      size: medium
+    steps:
+      - run_tests:
+          version: "12"
   node-14:
     docker:
       - image: circleci/node:14
