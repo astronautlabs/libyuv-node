@@ -46,6 +46,8 @@ jobs:
     executor:
       name: win/default
       size: medium
+    environment:
+      - PATH: "C:\Program Files\CMake\bin"
     steps:
       - run_tests_windows:
           version: "12"
