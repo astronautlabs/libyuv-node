@@ -9,10 +9,15 @@
   ],
   "description": "Bindings to libyuv, provides conversion utilities for in-memory YUV video frames",
   "repository": {
-    "url": "https://github.com/astronautlabs/libyuv-node"
+    "url": "https://github.com/astronautlabs/libyuv-node.git"
+  },
+  "homepage": "https://github.com/astronautlabs/libyuv-node",
+  "bugs": {
+    "url": "https://github.com/astronautlabs/libyuv-node/issues"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "cpu": ["x64", "arm", "mips"],
   "scripts": {
     "install": "npm run libyuv:build && npm run rebuild",
     "libyuv:build": "node scripts/libyuv-build.js",
@@ -24,7 +29,10 @@
     "ts:build": "tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Astronaut Labs",
+  "author": {
+    "name": "Astronaut Labs",
+    "url": "https://astronautlabs.com/"
+  },
   "license": "MIT",
   "devDependencies": {
     "rimraf": "^3.0.2"
