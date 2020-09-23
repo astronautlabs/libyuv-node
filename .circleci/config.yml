@@ -8,6 +8,6 @@ workflows:
           matrix:
             parameters:
               version:
-                - 14.11
-                - 12.18
-                - 10.22
+                - '14.11'
+                - '12.18'
+                - '10.22'
