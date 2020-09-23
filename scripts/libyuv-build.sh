@@ -15,7 +15,16 @@ fi
 cd libyuv
 mkdir -p out
 cd out
+
+if [ `uname` = 'Darwin' ]; then
+    sed -i '' 's/if (JPEG_FOUND)/if (0 AND JPEG_FOUND)/' ../CMakeLists.txt
+fi
+
 cmake -DCMAKE_BUILD_TYPE="Release" -DCMAKE_POSITION_INDEPENDENT_CODE=ON ..
 cmake --build . --config Release
+
 cp libyuv.a ../..
-cp libyuv.so ../..
+
+if ! [ `uname` = 'Darwin' ]; then
+    cp libyuv.so ../..
+fi

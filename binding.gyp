@@ -39,6 +39,7 @@
                     {
                         "link_settings": {
                             "libraries": [
+                                "<(module_root_dir)/external/libyuv.a"
                             ]
                         }
                     }
