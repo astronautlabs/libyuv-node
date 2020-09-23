@@ -1,4 +1,11 @@
 #!/bin/bash
+
+echo "Kernel: `uname -r`"
+
+if [ -f /etc/lsb-release ]; then
+    echo "Distribution: `cat /etc/lsb-release`"
+fi
+
 set -ev
 mkdir -p external
 cd external
