@@ -2,6 +2,9 @@
 
 version: 2.1
 
+orbs:
+  win: circleci/windows@2.2.0
+
 commands:
   run_tests:
     description: "Build libyuv-node and run the test suite"
