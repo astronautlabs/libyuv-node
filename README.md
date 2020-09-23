@@ -1,6 +1,10 @@
 # libyuv-node
 ## Node.js bindings for Chromium's [libyuv](https://chromium.googlesource.com/libyuv/libyuv/) library. 
 
+[![Version](https://img.shields.io/npm/v/libyuv.svg)](https://www.npmjs.com/package/libyuv)
+[![CircleCI](https://circleci.com/gh/astronautlabs/libyuv-node.svg?style=svg)](https://circleci.com/gh/astronautlabs/libyuv-node)
+
+
 libyuv is an open source project that includes YUV scaling and conversion functionality.
 
 - Scale YUV to prepare content for compression, with point, bilinear or box filter.
