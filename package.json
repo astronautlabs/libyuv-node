@@ -11,8 +11,8 @@
   "repository": {
     "url": "https://github.com/astronautlabs/libyuv-node"
   },
-  "main": "binding.js",
-  "types": "binding.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "install": "npm run libyuv:build && npm run rebuild",
     "libyuv:build": "node scripts/libyuv-build.js",
@@ -20,6 +20,8 @@
     "clean": "npm run libyuv:clean && rimraf build",
     "rebuild": "node-gyp rebuild",
     "build": "npm run libyuv:build && npm run rebuild",
+    "prepublish": "npm run ts:build",
+    "ts:build": "tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Astronaut Labs",

@@ -10,7 +10,7 @@
 #include "version.h"
 #include "config.h"
 
-void Init(Napi::Env env, Napi::Object exports) {
+static Napi::Object Init(Napi::Env env, Napi::Object exports) {
     
     // convert.cc
     exports.Set("I444ToI420", Napi::Function::New(env, I444ToI420));
@@ -227,4 +227,8 @@ void Init(Napi::Env env, Napi::Object exports) {
     // version.h
 
     exports.Set("Version", Napi::Function::New(env, Version));
+
+    return exports;
 }
+
+NODE_API_MODULE(libyuv, Init);

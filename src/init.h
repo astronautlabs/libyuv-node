@@ -1,3 +1,3 @@
 #include <napi.h>
 
-void Init(Napi::Env, Napi::Object);
+static Napi::Object Init(Napi::Env, Napi::Object);
