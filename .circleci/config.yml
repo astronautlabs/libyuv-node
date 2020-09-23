@@ -14,7 +14,7 @@ commands:
     steps:
       - run: choco install cmake
       - run_tests:
-        version: << parameters.version >>
+          version: << parameters.version >>
   run_tests_linux:
     description: "Build libyuv-node and run the test suite"
     parameters:
@@ -23,7 +23,7 @@ commands:
     steps:
       - run: sudo apt install cmake    
       - run_tests:
-        version: << parameters.version >>
+          version: << parameters.version >>
   run_tests:
     description: "Build libyuv-node and run the test suite"
     parameters:
