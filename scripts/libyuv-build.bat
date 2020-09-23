@@ -1,4 +1,8 @@
-set PATH=%PATH%C:\\Program Files\\CMake\\bin;
+
+echo "ENVIRONMENT:"
+set
+
+set Path=%Path%C:\\Program Files\\CMake\\bin;
 
 mkdir external
 cd external
