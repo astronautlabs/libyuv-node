@@ -9,7 +9,7 @@ commands:
       version:
         type: string
     steps:
-      - run: apt install cmake
+      - run: sudo apt install cmake
       - checkout
       - restore_cache:
           keys:
