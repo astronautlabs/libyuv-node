@@ -21,7 +21,12 @@ cd out
 # Issues:
 # - macOS: Fails to link libyuv shared lib target with undefined symbol errors
 # - linux: At runtime: undefined symbol: jpeg_resync_to_restart
-sed -i '' 's/if (JPEG_FOUND)/if (0 AND JPEG_FOUND)/' ../CMakeLists.txt
+if [ `uname` = 'Darwin' ]; then
+    # macOS is a terrible operating system
+    sed -i '' 's/if (JPEG_FOUND)/if (0 AND JPEG_FOUND)/' ../CMakeLists.txt
+else
+    sed -i 's/if (JPEG_FOUND)/if (0 AND JPEG_FOUND)/' ../CMakeLists.txt
+end
 
 cmake -DCMAKE_BUILD_TYPE="Release" -DCMAKE_POSITION_INDEPENDENT_CODE=ON ..
 cmake --build . --config Release
