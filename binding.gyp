@@ -1,7 +1,7 @@
 {
     "targets": [
         {
-            "target_name" : "libyuv",
+            "target_name" : "yuv",
             'include_dirs': [
                 "<!(node -p \"require('node-addon-api').include_dir\")",
                 "external/libyuv/include"

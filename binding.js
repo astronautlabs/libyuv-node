@@ -1,8 +1,5 @@
-// on macOS node-gyp auto-removes lib prefix (not sure why or how to stop it)
-let moduleName = process.platform === 'darwin' ? 'yuv' : 'libyuv';
-
 try {
-  module.exports = require(`./build/Debug/${moduleName}.node`);
+  module.exports = require(`./build/Debug/yuv.node`);
 } catch (error) {
-  module.exports = require(`./build/Release/${moduleName}.node`);
+  module.exports = require(`./build/Release/yuv.node`);
 }
