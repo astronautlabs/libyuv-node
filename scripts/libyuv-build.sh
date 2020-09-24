@@ -26,7 +26,7 @@ if [ `uname` = 'Darwin' ]; then
     sed -i '' 's/if (JPEG_FOUND)/if (0 AND JPEG_FOUND)/' ../CMakeLists.txt
 else
     sed -i 's/if (JPEG_FOUND)/if (0 AND JPEG_FOUND)/' ../CMakeLists.txt
-end
+fi
 
 cmake -DCMAKE_BUILD_TYPE="Release" -DCMAKE_POSITION_INDEPENDENT_CODE=ON ..
 cmake --build . --config Release
