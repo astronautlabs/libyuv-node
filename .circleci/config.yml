@@ -53,28 +53,28 @@ jobs:
     steps:
       - run_tests_windows:
           version: "12"
-  node-14:
+  linux-node-14:
     docker:
       - image: circleci/node:14
     working_directory: ~/repo
     steps:
       - run_tests_linux:
           version: "14"
-  node-12:
+  linux-node-12:
     docker:
       - image: circleci/node:12
     working_directory: ~/repo
     steps:
       - run_tests_linux:
           version: "12"
-  node-10:
+  linux-node-10:
     docker:
       - image: circleci/node:10
     working_directory: ~/repo
     steps:
       - run_tests_linux:
           version: "10"
-  node-8:
+  linux-node-8:
     docker:
       - image: circleci/node:8
     working_directory: ~/repo
@@ -87,7 +87,7 @@ workflows:
   build:
     jobs:
       - windows-node-12
-      - node-14
-      - node-12
-      - node-10
-      - node-8
+      - linux-node-14
+      - linux-node-12
+      - linux-node-10
+      - linux-node-8
