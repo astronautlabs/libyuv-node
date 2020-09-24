@@ -16,9 +16,12 @@ cd libyuv
 mkdir -p out
 cd out
 
-if [ `uname` = 'Darwin' ]; then
-    sed -i '' 's/if (JPEG_FOUND)/if (0 AND JPEG_FOUND)/' ../CMakeLists.txt
-fi
+# MJPEG functions are not currently supported even when libjpeg is available
+# on the host system.
+# Issues:
+# - macOS: Fails to link libyuv shared lib target with undefined symbol errors
+# - linux: At runtime: undefined symbol: jpeg_resync_to_restart
+sed -i '' 's/if (JPEG_FOUND)/if (0 AND JPEG_FOUND)/' ../CMakeLists.txt
 
 cmake -DCMAKE_BUILD_TYPE="Release" -DCMAKE_POSITION_INDEPENDENT_CODE=ON ..
 cmake --build . --config Release
