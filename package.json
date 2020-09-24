@@ -17,7 +17,11 @@
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "cpu": ["x64", "arm", "mips"],
+  "cpu": [
+    "x64",
+    "arm",
+    "mips"
+  ],
   "scripts": {
     "install": "npm run libyuv:build && npm run rebuild",
     "libyuv:build": "node scripts/libyuv-build.js",
@@ -27,7 +31,8 @@
     "build": "npm run libyuv:build && npm run rebuild",
     "prepublishOnly": "npm run ts:build",
     "ts:build": "tsc -p .",
-    "test": "npm run build"
+    "ts:test": "npm run ts:build && node dist/test",
+    "test": "npm run build && npm run ts:build && node dist/test"
   },
   "author": {
     "name": "Astronaut Labs",
@@ -35,6 +40,11 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/node": "14.0.4",
+    "chai": "^4.2.0",
+    "node-sha1": "^1.0.1",
+    "razmin": "^0.6.18",
     "rimraf": "^3.0.2"
   },
   "dependencies": {
