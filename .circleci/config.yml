@@ -15,6 +15,7 @@ commands:
       - run: choco install cmake
       - run_tests:
           version: << parameters.version >>
+          os: "windows"
   run_tests_linux:
     description: "Build libyuv-node and run the test suite"
     parameters:
@@ -24,22 +25,25 @@ commands:
       - run: sudo apt install cmake    
       - run_tests:
           version: << parameters.version >>
+          os: "linux"
   run_tests:
     description: "Build libyuv-node and run the test suite"
     parameters:
       version:
         type: string
+      os:
+        type: string
     steps:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-<< parameters.version >>-{{ checksum "package.json" }}
-          - v1-dependencies-<< parameters.version >>-
+          - v1-dependencies-<< parameters.os >>-<< parameters.version >>-{{ checksum "package.json" }}
+          - v1-dependencies-<< parameters.os >>-<< parameters.version >>-
       - run: npm install
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-<< parameters.version >>-{{ checksum "package.json" }}
+          key: v1-dependencies-<< parameters.os >>-<< parameters.version >>-{{ checksum "package.json" }}
       - run: npm test
 jobs:
   windows-node-12:
