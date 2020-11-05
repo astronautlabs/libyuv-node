@@ -29,7 +29,7 @@
     "clean": "npm run libyuv:clean && rimraf build && rimraf dist",
     "rebuild": "node-gyp rebuild",
     "build": "npm run libyuv:build && npm run rebuild",
-    "prepublishOnly": "npm run ts:build",
+    "prepublishOnly": "npm run test",
     "ts:build": "tsc -p .",
     "ts:test": "npm run ts:build && node dist/test",
     "test": "npm run build && npm run ts:build && node dist/test"
