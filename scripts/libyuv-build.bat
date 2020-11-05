@@ -10,6 +10,10 @@ set Path=%ORIGINAL_PATH%C:\\Program Files\\CMake\\bin;
 mkdir external
 cd external
 git clone https://chromium.googlesource.com/libyuv/libyuv
+
+rem Disable JPEG as it is not yet supported
+node ../scripts/disable-jpeg.js 
+
 cd libyuv
 mkdir out
 cd out 
