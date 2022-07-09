@@ -22,7 +22,7 @@ commands:
       version:
         type: string
     steps:
-      - run: sudo apt install cmake    
+      - run: sudo apt update && sudo apt install cmake
       - run_tests:
           version: << parameters.version >>
           os: "linux"
