@@ -10,7 +10,7 @@ set -ev
 mkdir -p external
 cd external
 if ! [ -d libyuv ]; then
-    git clone https://chromium.googlesource.com/libyuv/libyuv
+    git clone https://chromium.googlesource.com/libyuv/libyuv --branch stable
 fi
 cd libyuv
 mkdir -p out
