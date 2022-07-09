@@ -10,14 +10,11 @@ void copy_to_array(T (&dest)[N], T *src) {
 
 libyuv::YuvConstants serializeConstants(const Napi::Object &obj) {
     libyuv::YuvConstants constants;
-    copy_to_array(constants.kUVBiasB, obj.Get("kUVBiasB").As<Napi::Int16Array>().Data());
-    copy_to_array(constants.kUVBiasG, obj.Get("kUVBiasG").As<Napi::Int16Array>().Data());
-    copy_to_array(constants.kUVBiasR, obj.Get("kUVBiasR").As<Napi::Int16Array>().Data());
-    copy_to_array(constants.kUVToB, obj.Get("kUVToB").As<Napi::Int8Array>().Data());
-    copy_to_array(constants.kUVToG, obj.Get("kUVToG").As<Napi::Int8Array>().Data());
-    copy_to_array(constants.kUVToR, obj.Get("kUVToR").As<Napi::Int8Array>().Data());
-    copy_to_array(constants.kYBiasToRgb, obj.Get("kYBiasToRgb").As<Napi::Int16Array>().Data());
+    copy_to_array(constants.kUVToB, obj.Get("kUVToB").As<Napi::Uint8Array>().Data());
+    copy_to_array(constants.kUVToG, obj.Get("kUVToG").As<Napi::Uint8Array>().Data());
+    copy_to_array(constants.kUVToR, obj.Get("kUVToR").As<Napi::Uint8Array>().Data());
     copy_to_array(constants.kYToRgb, obj.Get("kYToRgb").As<Napi::Int16Array>().Data());
+    copy_to_array(constants.kYBiasToRgb, obj.Get("kYBiasToRgb").As<Napi::Int16Array>().Data());
 
     return constants;
 }
