@@ -5,7 +5,7 @@ rem in a working situation in most cases
 
 set ORIGINAL_PATH=%Path%
 set PATH=
-set Path=%ORIGINAL_PATH%C:\\Program Files\\CMake\\bin;
+set Path=%C:\\Program Files\\CMake\\bin;%ORIGINAL_PATH
 
 mkdir external
 cd external
