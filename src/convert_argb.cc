@@ -2,6 +2,14 @@
 #include "convert_argb.h"
 #include "config.h"
 
+#if defined(__aarch64__) || defined(__arm__)
+template<typename T, typename V = std::vector<T>, size_t N = sizeof(V) / sizeof(T)>
+void copy_to_vector(V (&dest), T *src) {
+    for (unsigned int i = 0; i < N; ++i)
+        dest[i] = src[i];
+}
+#endif
+
 template<typename T, size_t N>
 void copy_to_array(T (&dest)[N], T *src) {
     for (unsigned int i = 0; i < N; ++i)
@@ -10,11 +18,16 @@ void copy_to_array(T (&dest)[N], T *src) {
 
 libyuv::YuvConstants serializeConstants(const Napi::Object &obj) {
     libyuv::YuvConstants constants;
+    #if defined(__aarch64__) || defined(__arm__)
+    copy_to_vector(constants.kUVCoeff, obj.Get("kUVCoeff").As<Napi::Uint8Array>().Data());
+    copy_to_vector(constants.kRGBCoeffBias, obj.Get("kRGBCoeffBias").As<Napi::Int16Array>().Data());
+    #else
     copy_to_array(constants.kUVToB, obj.Get("kUVToB").As<Napi::Uint8Array>().Data());
     copy_to_array(constants.kUVToG, obj.Get("kUVToG").As<Napi::Uint8Array>().Data());
     copy_to_array(constants.kUVToR, obj.Get("kUVToR").As<Napi::Uint8Array>().Data());
     copy_to_array(constants.kYToRgb, obj.Get("kYToRgb").As<Napi::Int16Array>().Data());
     copy_to_array(constants.kYBiasToRgb, obj.Get("kYBiasToRgb").As<Napi::Int16Array>().Data());
+    #endif
 
     return constants;
 }
