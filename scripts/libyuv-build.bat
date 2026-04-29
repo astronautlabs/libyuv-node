@@ -1,3 +1,5 @@
+@echo off
+
 rem Handles issues with CircleCI declaring both PATH and Path
 rem But must be handled carefully, because set PATH= will clear 
 rem PATH entirely when there is not two set. This should result 
