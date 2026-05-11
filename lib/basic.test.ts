@@ -1,4 +1,4 @@
-import { describe } from "razmin";
+import 'jasmine';
 import { expect } from 'chai';
 
 import * as libyuv from '.';
@@ -7,7 +7,7 @@ import crypto from 'crypto';
 import stream from 'stream';
 
 describe(`libyuv`, () => {
-    describe(`.Version()`, it => {
+    describe(`.Version()`, () => {
         it(`should return its version as a number`, () => {
             expect(typeof libyuv.Version() === 'number', 'version must be a number').to.be.true;
         });
@@ -17,7 +17,7 @@ describe(`libyuv`, () => {
         })
     });
 
-    describe('.I420ToABGR()', it => {
+    describe('.I420ToABGR()', () => {
         it(`should successfully run a basic conversion`, () => {
             let width = 50;
             let height = 50;

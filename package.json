@@ -31,8 +31,8 @@
     "rebuild": "node-gyp rebuild",
     "build": "npm run libyuv:build && npm run rebuild",
     "prepublishOnly": "npm run test",
-    "ts:build": "tsc -p .",
-    "ts:test": "npm run ts:build && node dist/test",
+    "ts:build": "tsc -b",
+    "ts:test": "npm run ts:build && jasmine dist/**.test.js",
     "test": "npm run build && npm run ts:build && node dist/test"
   },
   "author": {
@@ -42,9 +42,10 @@
   "license": "MIT",
   "devDependencies": {
     "@types/chai": "^4.2.12",
-    "@types/node": "^14.0.4",
+    "@types/jasmine": "^6.0.0",
+    "@types/node": "^24",
     "chai": "^4.2.0",
-    "razmin": "^0.6.20",
+    "jasmine": "^6.2.0",
     "rimraf": "^3.0.2",
     "typescript": "^5.9.3"
   },
