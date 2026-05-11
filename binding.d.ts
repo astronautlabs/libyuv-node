@@ -2299,14 +2299,14 @@ export function MaskCpuFlags(enable_flags: number): number;
  * other library CPU info to libyuv CPU info and add a .md doc that explains
  * CPU detection.
  */
-export function SetCpuFlags(cpu_flags: number);
+export function SetCpuFlags(cpu_flags: number): void;
 
 /**
  * Low level cpuid for X86. Returns zeros on other CPUs.
  * eax is the info type that you want.
  * ecx is typically the cpu number, and should normally be zero.
  */
-export function CpuId(info_eax: number, info_ecx: number, cpu_info: Int32Array);
+export function CpuId(info_eax: number, info_ecx: number, cpu_info: Int32Array): void;
 //#endregion
 //#region rotate_argb.h
 
@@ -2397,7 +2397,7 @@ export function RotatePlane90(
     dst: Uint8Array,
     dst_stride: number,
     width: number,
-    height: number);
+    height: number): void;
 
 export function RotatePlane180(
     src: Uint8Array,
@@ -2405,7 +2405,7 @@ export function RotatePlane180(
     dst: Uint8Array,
     dst_stride: number,
     width: number,
-    height: number);
+    height: number): void;
 
 export function RotatePlane270(
     src: Uint8Array,
@@ -2413,7 +2413,7 @@ export function RotatePlane270(
     dst: Uint8Array,
     dst_stride: number,
     width: number,
-    height: number);
+    height: number): void;
 
 // Rotations for when U and V are interleaved.
 // These functions take one input pointer and
@@ -2427,7 +2427,7 @@ export function RotateUV90(
     dst_b: Uint8Array,
     dst_stride_b: number,
     width: number,
-    height: number);
+    height: number): void;
 
 export function RotateUV180(
     src: Uint8Array,
@@ -2437,7 +2437,7 @@ export function RotateUV180(
     dst_b: Uint8Array,
     dst_stride_b: number,
     width: number,
-    height: number);
+    height: number): void;
 
 export function RotateUV270(
     src: Uint8Array,
@@ -2447,7 +2447,7 @@ export function RotateUV270(
     dst_b: Uint8Array,
     dst_stride_b: number,
     width: number,
-    height: number);
+    height: number): void;
 
 // The 90 and 270 functions are based on transposes.
 // Doing a transpose with reversing the read/write
@@ -2459,7 +2459,7 @@ export function TransposePlane(
     dst: Uint8Array,
     dst_stride: number,
     width: number,
-    height: number);
+    height: number): void;
 
 export function TransposeUV(
     src: Uint8Array,
@@ -2469,7 +2469,7 @@ export function TransposeUV(
     dst_b: Uint8Array,
     dst_stride_b: number,
     width: number,
-    height: number);
+    height: number): void;
 
 
 //#endregion
@@ -2543,7 +2543,7 @@ export function ScalePlane(
     dst_width: number,
     dst_height: number,
     filtering: FilterMode
-);
+): void;
 
 export function ScalePlane_16(
     src: Uint16Array,
@@ -2555,7 +2555,7 @@ export function ScalePlane_16(
     dst_width: number,
     dst_height: number,
     filtering: FilterMode
-);
+): void;
 
 // Scales a YUV 4:2:0 image from the src width and height to the
 // dst width and height.
