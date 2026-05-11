@@ -33,7 +33,7 @@
     "prepublishOnly": "npm run test",
     "ts:build": "tsc -b",
     "ts:test": "npm run ts:build && jasmine dist/**.test.js",
-    "test": "npm run build && npm run ts:build && node dist/test"
+    "test": "npm run build && npm run ts:build && jasmine dist/**.test.js"
   },
   "author": {
     "name": "Astronaut Labs",
