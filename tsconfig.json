@@ -5,7 +5,11 @@
         "module": "commonjs",
         "moduleResolution": "node",
         "declaration": true,
-        "sourceMap": true
+        "sourceMap": true,
+        "strict": true,
+        "types": [
+            "node"
+        ]
     },
     "include": [
         "./lib/**/*.ts"
