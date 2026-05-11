@@ -2,13 +2,15 @@ import type { FilterMode, RotationMode } from './lib/enums';
 
 //#region convert_argb.h
 
+type DataBuffer = Uint8Array | Uint8ClampedArray;
+
 /**
  * Copy ARGB to ARGB.
  */
 export function ARGBCopy(
-    src_argb: Uint8Array,
+    src_argb: DataBuffer,
     src_stride_argb: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -18,13 +20,13 @@ export function ARGBCopy(
  * Convert I420 to ARGB.
  */
 export function I420ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -34,13 +36,13 @@ export function I420ToARGB(
  * Convert I420 to ABGR.
  */
 export function I420ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -50,13 +52,13 @@ export function I420ToABGR(
  * Convert J420 to ARGB.
  */
 export function J420ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -66,13 +68,13 @@ export function J420ToARGB(
  * Convert J420 to ABGR.
  */
 export function J420ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -82,13 +84,13 @@ export function J420ToABGR(
  * Convert H420 to ARGB.
  */
 export function H420ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -98,13 +100,13 @@ export function H420ToARGB(
  * Convert H420 to ABGR.
  */
 export function H420ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -114,13 +116,13 @@ export function H420ToABGR(
  * Convert U420 to ARGB.
  */
 export function U420ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -130,13 +132,13 @@ export function U420ToARGB(
  * Convert U420 to ABGR.
  */
 export function U420ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -146,13 +148,13 @@ export function U420ToABGR(
  * Convert I422 to ARGB.
  */
 export function I422ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -162,13 +164,13 @@ export function I422ToARGB(
  * Convert I422 to ABGR.
  */
 export function I422ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -178,13 +180,13 @@ export function I422ToABGR(
  * Convert J422 to ARGB.
  */
 export function J422ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -194,13 +196,13 @@ export function J422ToARGB(
  * Convert J422 to ABGR.
  */
 export function J422ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -210,13 +212,13 @@ export function J422ToABGR(
  * Convert H422 to ARGB.
  */
 export function H422ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -226,13 +228,13 @@ export function H422ToARGB(
  * Convert H422 to ABGR.
  */
 export function H422ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -242,13 +244,13 @@ export function H422ToABGR(
  * Convert U422 to ARGB.
  */
 export function U422ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -258,13 +260,13 @@ export function U422ToARGB(
  * Convert U422 to ABGR.
  */
 export function U422ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -274,13 +276,13 @@ export function U422ToABGR(
  * Convert I444 to ARGB.
  */
 export function I444ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -290,13 +292,13 @@ export function I444ToARGB(
  * Convert I444 to ABGR.
  */
 export function I444ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -304,13 +306,13 @@ export function I444ToABGR(
 
 /** Convert J444 to ARGB. */
 export function J444ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -318,13 +320,13 @@ export function J444ToARGB(
 
 /** Convert J444 to ABGR. */
 export function J444ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -332,13 +334,13 @@ export function J444ToABGR(
 
 /** Convert H444 to ARGB. */
 export function H444ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -346,13 +348,13 @@ export function H444ToARGB(
 
 /** Convert H444 to ABGR. */
 export function H444ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -360,13 +362,13 @@ export function H444ToABGR(
 
 /** Convert U444 to ARGB. */
 export function U444ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -374,13 +376,13 @@ export function U444ToARGB(
 
 /** Convert U444 to ABGR. */
 export function U444ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -394,7 +396,7 @@ export function I010ToARGB(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -408,7 +410,7 @@ export function I010ToABGR(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -422,7 +424,7 @@ export function H010ToARGB(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -436,7 +438,7 @@ export function H010ToABGR(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -450,7 +452,7 @@ export function U010ToARGB(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -464,7 +466,7 @@ export function U010ToABGR(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -478,7 +480,7 @@ export function I210ToARGB(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -492,7 +494,7 @@ export function I210ToABGR(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -506,7 +508,7 @@ export function H210ToARGB(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -520,7 +522,7 @@ export function H210ToABGR(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -534,7 +536,7 @@ export function U210ToARGB(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -548,7 +550,7 @@ export function U210ToABGR(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -556,15 +558,15 @@ export function U210ToABGR(
 
 /** Convert I420 with Alpha to preattenuated ARGB. */
 export function I420AlphaToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    src_a: Uint8Array,
+    src_a: DataBuffer,
     src_stride_a: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number,
@@ -573,15 +575,15 @@ export function I420AlphaToARGB(
 
 /** Convert I420 with Alpha to preattenuated ABGR. */
 export function I420AlphaToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    src_a: Uint8Array,
+    src_a: DataBuffer,
     src_stride_a: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number,
@@ -590,9 +592,9 @@ export function I420AlphaToABGR(
 
 /** Convert I400 (grey) to ARGB.  Reverse of ARGBToI400. */
 export function I400ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -600,9 +602,9 @@ export function I400ToARGB(
 
 /** Convert J400 (jpeg grey) to ARGB. */
 export function J400ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -613,11 +615,11 @@ export function J400ToARGB(
 
 /** Convert NV12 to ARGB. */
 export function NV12ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_uv: Uint8Array,
+    src_uv: DataBuffer,
     src_stride_uv: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -625,11 +627,11 @@ export function NV12ToARGB(
 
 /** Convert NV21 to ARGB. */
 export function NV21ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_vu: Uint8Array,
+    src_vu: DataBuffer,
     src_stride_vu: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -637,11 +639,11 @@ export function NV21ToARGB(
 
 /** Convert NV12 to ABGR. */
 export function NV12ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_uv: Uint8Array,
+    src_uv: DataBuffer,
     src_stride_uv: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -649,11 +651,11 @@ export function NV12ToABGR(
 
 /** Convert NV21 to ABGR. */
 export function NV21ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_vu: Uint8Array,
+    src_vu: DataBuffer,
     src_stride_vu: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -661,11 +663,11 @@ export function NV21ToABGR(
 
 /** Convert NV12 to RGB24. */
 export function NV12ToRGB24(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_uv: Uint8Array,
+    src_uv: DataBuffer,
     src_stride_uv: number,
-    dst_rgb24: Uint8Array,
+    dst_rgb24: DataBuffer,
     dst_stride_rgb24: number,
     width: number,
     height: number
@@ -673,11 +675,11 @@ export function NV12ToRGB24(
 
 /** Convert NV21 to RGB24. */
 export function NV21ToRGB24(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_vu: Uint8Array,
+    src_vu: DataBuffer,
     src_stride_vu: number,
-    dst_rgb24: Uint8Array,
+    dst_rgb24: DataBuffer,
     dst_stride_rgb24: number,
     width: number,
     height: number
@@ -685,11 +687,11 @@ export function NV21ToRGB24(
 
 /** Convert NV21 to YUV24. */
 export function NV21ToYUV24(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_vu: Uint8Array,
+    src_vu: DataBuffer,
     src_stride_vu: number,
-    dst_yuv24: Uint8Array,
+    dst_yuv24: DataBuffer,
     dst_stride_yuv24: number,
     width: number,
     height: number
@@ -697,11 +699,11 @@ export function NV21ToYUV24(
 
 /** Convert NV12 to RAW. */
 export function NV12ToRAW(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_uv: Uint8Array,
+    src_uv: DataBuffer,
     src_stride_uv: number,
-    dst_raw: Uint8Array,
+    dst_raw: DataBuffer,
     dst_stride_raw: number,
     width: number,
     height: number
@@ -709,11 +711,11 @@ export function NV12ToRAW(
 
 /** Convert NV21 to RAW. */
 export function NV21ToRAW(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_vu: Uint8Array,
+    src_vu: DataBuffer,
     src_stride_vu: number,
-    dst_raw: Uint8Array,
+    dst_raw: DataBuffer,
     dst_stride_raw: number,
     width: number,
     height: number
@@ -721,9 +723,9 @@ export function NV21ToRAW(
 
 /** Convert YUY2 to ARGB. */
 export function YUY2ToARGB(
-    src_yuy2: Uint8Array,
+    src_yuy2: DataBuffer,
     src_stride_yuy2: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -731,9 +733,9 @@ export function YUY2ToARGB(
 
 /** Convert UYVY to ARGB. */
 export function UYVYToARGB(
-    src_uyvy: Uint8Array,
+    src_uyvy: DataBuffer,
     src_stride_uyvy: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -747,7 +749,7 @@ export function I010ToAR30(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_ar30: Uint8Array,
+    dst_ar30: DataBuffer,
     dst_stride_ar30: number,
     width: number,
     height: number
@@ -761,7 +763,7 @@ export function I010ToAB30(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_ab30: Uint8Array,
+    dst_ab30: DataBuffer,
     dst_stride_ab30: number,
     width: number,
     height: number
@@ -775,7 +777,7 @@ export function H010ToAR30(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_ar30: Uint8Array,
+    dst_ar30: DataBuffer,
     dst_stride_ar30: number,
     width: number,
     height: number
@@ -789,7 +791,7 @@ export function H010ToAB30(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_ab30: Uint8Array,
+    dst_ab30: DataBuffer,
     dst_stride_ab30: number,
     width: number,
     height: number
@@ -803,7 +805,7 @@ export function U010ToAR30(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_ar30: Uint8Array,
+    dst_ar30: DataBuffer,
     dst_stride_ar30: number,
     width: number,
     height: number
@@ -817,7 +819,7 @@ export function U010ToAB30(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_ab30: Uint8Array,
+    dst_ab30: DataBuffer,
     dst_stride_ab30: number,
     width: number,
     height: number
@@ -831,7 +833,7 @@ export function I210ToAR30(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_ar30: Uint8Array,
+    dst_ar30: DataBuffer,
     dst_stride_ar30: number,
     width: number,
     height: number
@@ -845,7 +847,7 @@ export function I210ToAB30(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_ab30: Uint8Array,
+    dst_ab30: DataBuffer,
     dst_stride_ab30: number,
     width: number,
     height: number
@@ -859,7 +861,7 @@ export function H210ToAR30(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_ar30: Uint8Array,
+    dst_ar30: DataBuffer,
     dst_stride_ar30: number,
     width: number,
     height: number
@@ -873,7 +875,7 @@ export function H210ToAB30(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_ab30: Uint8Array,
+    dst_ab30: DataBuffer,
     dst_stride_ab30: number,
     width: number,
     height: number
@@ -887,7 +889,7 @@ export function U210ToAR30(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_ar30: Uint8Array,
+    dst_ar30: DataBuffer,
     dst_stride_ar30: number,
     width: number,
     height: number
@@ -901,7 +903,7 @@ export function U210ToAB30(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_ab30: Uint8Array,
+    dst_ab30: DataBuffer,
     dst_stride_ab30: number,
     width: number,
     height: number
@@ -909,9 +911,9 @@ export function U210ToAB30(
 
 /** BGRA little endian (argb in memory) to ARGB. */
 export function BGRAToARGB(
-    src_bgra: Uint8Array,
+    src_bgra: DataBuffer,
     src_stride_bgra: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -919,9 +921,9 @@ export function BGRAToARGB(
 
 /** ABGR little endian (rgba in memory) to ARGB. */
 export function ABGRToARGB(
-    src_abgr: Uint8Array,
+    src_abgr: DataBuffer,
     src_stride_abgr: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -929,9 +931,9 @@ export function ABGRToARGB(
 
 /** RGBA little endian (abgr in memory) to ARGB. */
 export function RGBAToARGB(
-    src_rgba: Uint8Array,
+    src_rgba: DataBuffer,
     src_stride_rgba: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -942,9 +944,9 @@ export function RGBAToARGB(
 
 /** RGB little endian (bgr in memory) to ARGB. */
 export function RGB24ToARGB(
-    src_rgb24: Uint8Array,
+    src_rgb24: DataBuffer,
     src_stride_rgb24: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -952,9 +954,9 @@ export function RGB24ToARGB(
 
 /** RGB big endian (rgb in memory) to ARGB. */
 export function RAWToARGB(
-    src_raw: Uint8Array,
+    src_raw: DataBuffer,
     src_stride_raw: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -962,9 +964,9 @@ export function RAWToARGB(
 
 /** RGB big endian (rgb in memory) to RGBA. */
 export function RAWToRGBA(
-    src_raw: Uint8Array,
+    src_raw: DataBuffer,
     src_stride_raw: number,
-    dst_rgba: Uint8Array,
+    dst_rgba: DataBuffer,
     dst_stride_rgba: number,
     width: number,
     height: number
@@ -972,9 +974,9 @@ export function RAWToRGBA(
 
 /** RGB16 (RGBP fourcc) little endian to ARGB. */
 export function RGB565ToARGB(
-    src_rgb565: Uint8Array,
+    src_rgb565: DataBuffer,
     src_stride_rgb565: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -982,9 +984,9 @@ export function RGB565ToARGB(
 
 /** RGB15 (RGBO fourcc) little endian to ARGB. */
 export function ARGB1555ToARGB(
-    src_argb1555: Uint8Array,
+    src_argb1555: DataBuffer,
     src_stride_argb1555: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -992,9 +994,9 @@ export function ARGB1555ToARGB(
 
 /** RGB12 (R444 fourcc) little endian to ARGB. */
 export function ARGB4444ToARGB(
-    src_argb4444: Uint8Array,
+    src_argb4444: DataBuffer,
     src_stride_argb4444: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -1007,9 +1009,9 @@ export function ARGB4444ToARGB(
 
 /** Convert AR30 To ARGB. */
 export function AR30ToARGB(
-    src_ar30: Uint8Array,
+    src_ar30: DataBuffer,
     src_stride_ar30: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -1017,9 +1019,9 @@ export function AR30ToARGB(
 
 /** Convert AR30 To ABGR. */
 export function AR30ToABGR(
-    src_ar30: Uint8Array,
+    src_ar30: DataBuffer,
     src_stride_ar30: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -1027,9 +1029,9 @@ export function AR30ToABGR(
 
 /** Convert AR30 To AB30. */
 export function AR30ToAB30(
-    src_ar30: Uint8Array,
+    src_ar30: DataBuffer,
     src_stride_ar30: number,
-    dst_ab30: Uint8Array,
+    dst_ab30: DataBuffer,
     dst_stride_ab30: number,
     width: number,
     height: number
@@ -1038,9 +1040,9 @@ export function AR30ToAB30(
 // /** src_width/height provided by capture */
 // /** dst_width/height for clipping determine final size. */
 // export function MJPGToARGB(
-//     sample: Uint8Array,
+//     sample: DataBuffer,
 //     sample_size: number,
-//     dst_argb: Uint8Array,
+//     dst_argb: DataBuffer,
 //     dst_stride_argb: number,
 //     src_width: number,
 //     src_height: number,
@@ -1050,14 +1052,14 @@ export function AR30ToAB30(
 
 /** Convert Android420 to ARGB. */
 export function Android420ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
     src_pixel_stride_uv: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
@@ -1065,14 +1067,14 @@ export function Android420ToARGB(
 
 /** Convert Android420 to ABGR. */
 export function Android420ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
     src_pixel_stride_uv: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -1080,11 +1082,11 @@ export function Android420ToABGR(
 
 /** Convert NV12 to RGB565. */
 export function NV12ToRGB565(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_uv: Uint8Array,
+    src_uv: DataBuffer,
     src_stride_uv: number,
-    dst_rgb565: Uint8Array,
+    dst_rgb565: DataBuffer,
     dst_stride_rgb565: number,
     width: number,
     height: number
@@ -1092,13 +1094,13 @@ export function NV12ToRGB565(
 
 /** Convert I422 to BGRA. */
 export function I422ToBGRA(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_bgra: Uint8Array,
+    dst_bgra: DataBuffer,
     dst_stride_bgra: number,
     width: number,
     height: number
@@ -1106,13 +1108,13 @@ export function I422ToBGRA(
 
 /** Convert I422 to ABGR. */
 export function I422ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
@@ -1120,195 +1122,195 @@ export function I422ToABGR(
 
 /** Convert I422 to RGBA. */
 export function I422ToRGBA(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_rgba: Uint8Array,
+    dst_rgba: DataBuffer,
     dst_stride_rgba: number,
     width: number,
     height: number
 ): number;
 
 export function I420ToARGB(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     width: number,
     height: number
 ): number;
 
 export function I420ToBGRA(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_bgra: Uint8Array,
+    dst_bgra: DataBuffer,
     dst_stride_bgra: number,
     width: number,
     height: number
 ): number;
 
 export function I420ToABGR(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_abgr: Uint8Array,
+    dst_abgr: DataBuffer,
     dst_stride_abgr: number,
     width: number,
     height: number
 ): number;
 
 export function I420ToRGBA(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_rgba: Uint8Array,
+    dst_rgba: DataBuffer,
     dst_stride_rgba: number,
     width: number,
     height: number
 ): number;
 
 export function I420ToRGB24(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_rgb24: Uint8Array,
+    dst_rgb24: DataBuffer,
     dst_stride_rgb24: number,
     width: number,
     height: number
 ): number;
 
 export function I420ToRAW(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_raw: Uint8Array,
+    dst_raw: DataBuffer,
     dst_stride_raw: number,
     width: number,
     height: number
 ): number;
 
 export function H420ToRGB24(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_rgb24: Uint8Array,
+    dst_rgb24: DataBuffer,
     dst_stride_rgb24: number,
     width: number,
     height: number
 ): number;
 
 export function H420ToRAW(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_raw: Uint8Array,
+    dst_raw: DataBuffer,
     dst_stride_raw: number,
     width: number,
     height: number
 ): number;
 
 export function J420ToRGB24(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_rgb24: Uint8Array,
+    dst_rgb24: DataBuffer,
     dst_stride_rgb24: number,
     width: number,
     height: number
 ): number;
 
 export function J420ToRAW(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_raw: Uint8Array,
+    dst_raw: DataBuffer,
     dst_stride_raw: number,
     width: number,
     height: number
 ): number;
 
 export function I420ToRGB565(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_rgb565: Uint8Array,
+    dst_rgb565: DataBuffer,
     dst_stride_rgb565: number,
     width: number,
     height: number
 ): number;
 
 export function J420ToRGB565(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_rgb565: Uint8Array,
+    dst_rgb565: DataBuffer,
     dst_stride_rgb565: number,
     width: number,
     height: number
 ): number;
 
 export function H420ToRGB565(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_rgb565: Uint8Array,
+    dst_rgb565: DataBuffer,
     dst_stride_rgb565: number,
     width: number,
     height: number
 ): number;
 
 export function I422ToRGB565(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_rgb565: Uint8Array,
+    dst_rgb565: DataBuffer,
     dst_stride_rgb565: number,
     width: number,
     height: number
@@ -1319,40 +1321,40 @@ export function I422ToRGB565(
 /** The order of the dither matrix is first byte is upper left. */
 
 export function I420ToRGB565Dither(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_rgb565: Uint8Array,
+    dst_rgb565: DataBuffer,
     dst_stride_rgb565: number,
-    dither4x4: Uint8Array,
+    dither4x4: DataBuffer,
     width: number,
     height: number
 ): number;
 
 export function I420ToARGB1555(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb1555: Uint8Array,
+    dst_argb1555: DataBuffer,
     dst_stride_argb1555: number,
     width: number,
     height: number
 ): number;
 
 export function I420ToARGB4444(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb4444: Uint8Array,
+    dst_argb4444: DataBuffer,
     dst_stride_argb4444: number,
     width: number,
     height: number
@@ -1360,13 +1362,13 @@ export function I420ToARGB4444(
 
 /** Convert I420 to AR30. */
 export function I420ToAR30(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_ar30: Uint8Array,
+    dst_ar30: DataBuffer,
     dst_stride_ar30: number,
     width: number,
     height: number
@@ -1374,13 +1376,13 @@ export function I420ToAR30(
 
 /** Convert H420 to AR30. */
 export function H420ToAR30(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_ar30: Uint8Array,
+    dst_ar30: DataBuffer,
     dst_stride_ar30: number,
     width: number,
     height: number
@@ -1388,13 +1390,13 @@ export function H420ToAR30(
 
 /** Convert I420 to ARGB with matrix. */
 export function I420ToARGBMatrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1403,13 +1405,13 @@ export function I420ToARGBMatrix(
 
 /** Convert I422 to ARGB with matrix. */
 export function I422ToARGBMatrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1418,13 +1420,13 @@ export function I422ToARGBMatrix(
 
 /** Convert I444 to ARGB with matrix. */
 export function I444ToARGBMatrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1439,7 +1441,7 @@ export function I010ToAR30Matrix(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_ar30: Uint8Array,
+    dst_ar30: DataBuffer,
     dst_stride_ar30: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1454,7 +1456,7 @@ export function I210ToAR30Matrix(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_ar30: Uint8Array,
+    dst_ar30: DataBuffer,
     dst_stride_ar30: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1469,7 +1471,7 @@ export function I010ToARGBMatrix(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1484,7 +1486,7 @@ export function I210ToARGBMatrix(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1493,15 +1495,15 @@ export function I210ToARGBMatrix(
 
 /** Convert I420 with Alpha to preattenuated ARGB with matrix. */
 export function I420AlphaToARGBMatrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    src_a: Uint8Array,
+    src_a: DataBuffer,
     src_stride_a: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1511,11 +1513,11 @@ export function I420AlphaToARGBMatrix(
 
 /** Convert NV12 to ARGB with matrix. */
 export function NV12ToARGBMatrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_uv: Uint8Array,
+    src_uv: DataBuffer,
     src_stride_uv: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1524,11 +1526,11 @@ export function NV12ToARGBMatrix(
 
 /** Convert NV21 to ARGB with matrix. */
 export function NV21ToARGBMatrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_vu: Uint8Array,
+    src_vu: DataBuffer,
     src_stride_vu: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1537,11 +1539,11 @@ export function NV21ToARGBMatrix(
 
 /** Convert NV12 to RGB565 with matrix. */
 export function NV12ToRGB565Matrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_uv: Uint8Array,
+    src_uv: DataBuffer,
     src_stride_uv: number,
-    dst_rgb565: Uint8Array,
+    dst_rgb565: DataBuffer,
     dst_stride_rgb565: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1550,11 +1552,11 @@ export function NV12ToRGB565Matrix(
 
 /** Convert NV12 to RGB24 with matrix. */
 export function NV12ToRGB24Matrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_uv: Uint8Array,
+    src_uv: DataBuffer,
     src_stride_uv: number,
-    dst_rgb24: Uint8Array,
+    dst_rgb24: DataBuffer,
     dst_stride_rgb24: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1563,11 +1565,11 @@ export function NV12ToRGB24Matrix(
 
 /** Convert NV21 to RGB24 with matrix. */
 export function NV21ToRGB24Matrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_vu: Uint8Array,
+    src_vu: DataBuffer,
     src_stride_vu: number,
-    dst_rgb24: Uint8Array,
+    dst_rgb24: DataBuffer,
     dst_stride_rgb24: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1576,14 +1578,14 @@ export function NV21ToRGB24Matrix(
 
 /** Convert Android420 to ARGB with matrix. */
 export function Android420ToARGBMatrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
     src_pixel_stride_uv: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1592,13 +1594,13 @@ export function Android420ToARGBMatrix(
 
 /** Convert I422 to RGBA with matrix. */
 export function I422ToRGBAMatrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_rgba: Uint8Array,
+    dst_rgba: DataBuffer,
     dst_stride_rgba: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1607,13 +1609,13 @@ export function I422ToRGBAMatrix(
 
 /** Convert I422 to RGBA with matrix. */
 export function I420ToRGBAMatrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_rgba: Uint8Array,
+    dst_rgba: DataBuffer,
     dst_stride_rgba: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1622,13 +1624,13 @@ export function I420ToRGBAMatrix(
 
 /** Convert I420 to RGB24 with matrix. */
 export function I420ToRGB24Matrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_rgb24: Uint8Array,
+    dst_rgb24: DataBuffer,
     dst_stride_rgb24: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1637,13 +1639,13 @@ export function I420ToRGB24Matrix(
 
 /** Convert I420 to RGB565 with specified color matrix. */
 export function I420ToRGB565Matrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_rgb565: Uint8Array,
+    dst_rgb565: DataBuffer,
     dst_stride_rgb565: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1652,13 +1654,13 @@ export function I420ToRGB565Matrix(
 
 /** Convert I420 to AR30 with matrix. */
 export function I420ToAR30Matrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_ar30: Uint8Array,
+    dst_ar30: DataBuffer,
     dst_stride_ar30: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1667,9 +1669,9 @@ export function I420ToAR30Matrix(
 
 /** Convert I400 (grey) to ARGB.  Reverse of ARGBToI400. */
 export function I400ToARGBMatrix(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     yuvconstants: YuvConstants,
     width: number,
@@ -1699,9 +1701,9 @@ export function I400ToARGBMatrix(
 /** "fourcc" is a fourcc. ie 'I420', 'YUY2' */
 /** Returns 0 for successful; -1 for invalid parameter. Non-zero for failure. */
 export function ConvertToARGB(
-    sample: Uint8Array,
+    sample: DataBuffer,
     sample_size: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     crop_x: number,
     crop_y: number,
@@ -1720,17 +1722,17 @@ export function ConvertToARGB(
 
 /** Convert I444 to I420. */
 export function I444ToI420(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -1738,15 +1740,15 @@ export function I444ToI420(
 
 /** Convert I444 to NV12. */
 export function I444ToNV12(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_uv: Uint8Array,
+    dst_uv: DataBuffer,
     dst_stride_uv: number,
     width: number,
     height: number
@@ -1754,15 +1756,15 @@ export function I444ToNV12(
 
 /** Convert I444 to NV21. */
 export function I444ToNV21(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_vu: Uint8Array,
+    dst_vu: DataBuffer,
     dst_stride_vu: number,
     width: number,
     height: number
@@ -1770,17 +1772,17 @@ export function I444ToNV21(
 
 /** Convert I422 to I420. */
 export function I422ToI420(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -1788,15 +1790,15 @@ export function I422ToI420(
 
 /** Convert I422 to NV21. */
 export function I422ToNV21(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_vu: Uint8Array,
+    dst_vu: DataBuffer,
     dst_stride_vu: number,
     width: number,
     height: number
@@ -1805,17 +1807,17 @@ export function I422ToNV21(
 /** Copy I420 to I420. */
 //#define I420ToI420 I420Copy
 export function I420Copy(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -1850,11 +1852,11 @@ export function I010ToI420(
     src_stride_u: number,
     src_v: Uint16Array,
     src_stride_v: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -1862,13 +1864,13 @@ export function I010ToI420(
 
 /** Convert I400 (grey) to I420. */
 export function I400ToI420(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -1876,11 +1878,11 @@ export function I400ToI420(
 
 /** Convert I400 (grey) to NV21. */
 export function I400ToNV21(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_vu: Uint8Array,
+    dst_vu: DataBuffer,
     dst_stride_vu: number,
     width: number,
     height: number
@@ -1890,15 +1892,15 @@ export function I400ToNV21(
 
 /** Convert NV12 to I420. */
 export function NV12ToI420(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_uv: Uint8Array,
+    src_uv: DataBuffer,
     src_stride_uv: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -1906,15 +1908,15 @@ export function NV12ToI420(
 
 /** Convert NV21 to I420. */
 export function NV21ToI420(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_vu: Uint8Array,
+    src_vu: DataBuffer,
     src_stride_vu: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -1922,13 +1924,13 @@ export function NV21ToI420(
 
 /** Convert YUY2 to I420. */
 export function YUY2ToI420(
-    src_yuy2: Uint8Array,
+    src_yuy2: DataBuffer,
     src_stride_yuy2: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -1936,13 +1938,13 @@ export function YUY2ToI420(
 
 /** Convert UYVY to I420. */
 export function UYVYToI420(
-    src_uyvy: Uint8Array,
+    src_uyvy: DataBuffer,
     src_stride_uyvy: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -1950,11 +1952,11 @@ export function UYVYToI420(
 
 /** Convert AYUV to NV12. */
 export function AYUVToNV12(
-    src_ayuv: Uint8Array,
+    src_ayuv: DataBuffer,
     src_stride_ayuv: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_uv: Uint8Array,
+    dst_uv: DataBuffer,
     dst_stride_uv: number,
     width: number,
     height: number
@@ -1962,11 +1964,11 @@ export function AYUVToNV12(
 
 /** Convert AYUV to NV21. */
 export function AYUVToNV21(
-    src_ayuv: Uint8Array,
+    src_ayuv: DataBuffer,
     src_stride_ayuv: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_vu: Uint8Array,
+    dst_vu: DataBuffer,
     dst_stride_vu: number,
     width: number,
     height: number
@@ -1974,18 +1976,18 @@ export function AYUVToNV21(
 
 /** Convert Android420 to I420. */
 export function Android420ToI420(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
     src_pixel_stride_uv: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -1993,13 +1995,13 @@ export function Android420ToI420(
 
 /** ARGB little endian (bgra in memory) to I420. */
 export function ARGBToI420(
-    src_argb: Uint8Array,
+    src_argb: DataBuffer,
     src_stride_argb: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -2007,13 +2009,13 @@ export function ARGBToI420(
 
 /** BGRA little endian (argb in memory) to I420. */
 export function BGRAToI420(
-    src_bgra: Uint8Array,
+    src_bgra: DataBuffer,
     src_stride_bgra: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -2021,13 +2023,13 @@ export function BGRAToI420(
 
 /** ABGR little endian (rgba in memory) to I420. */
 export function ABGRToI420(
-    src_abgr: Uint8Array,
+    src_abgr: DataBuffer,
     src_stride_abgr: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -2035,13 +2037,13 @@ export function ABGRToI420(
 
 /** RGBA little endian (abgr in memory) to I420. */
 export function RGBAToI420(
-    src_rgba: Uint8Array,
+    src_rgba: DataBuffer,
     src_stride_rgba: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -2049,13 +2051,13 @@ export function RGBAToI420(
 
 /** RGB little endian (bgr in memory) to I420. */
 export function RGB24ToI420(
-    src_rgb24: Uint8Array,
+    src_rgb24: DataBuffer,
     src_stride_rgb24: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -2063,13 +2065,13 @@ export function RGB24ToI420(
 
 /** RGB little endian (bgr in memory) to J420. */
 export function RGB24ToJ420(
-    src_rgb24: Uint8Array,
+    src_rgb24: DataBuffer,
     src_stride_rgb24: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -2077,13 +2079,13 @@ export function RGB24ToJ420(
 
 /** RGB big endian (rgb in memory) to I420. */
 export function RAWToI420(
-    src_raw: Uint8Array,
+    src_raw: DataBuffer,
     src_stride_raw: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -2091,13 +2093,13 @@ export function RAWToI420(
 
 /** RGB16 (RGBP fourcc) little endian to I420. */
 export function RGB565ToI420(
-    src_rgb565: Uint8Array,
+    src_rgb565: DataBuffer,
     src_stride_rgb565: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -2105,13 +2107,13 @@ export function RGB565ToI420(
 
 /** RGB15 (RGBO fourcc) little endian to I420. */
 export function ARGB1555ToI420(
-    src_argb1555: Uint8Array,
+    src_argb1555: DataBuffer,
     src_stride_argb1555: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -2119,13 +2121,13 @@ export function ARGB1555ToI420(
 
 /** RGB12 (R444 fourcc) little endian to I420. */
 export function ARGB4444ToI420(
-    src_argb4444: Uint8Array,
+    src_argb4444: DataBuffer,
     src_stride_argb4444: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number
@@ -2133,9 +2135,9 @@ export function ARGB4444ToI420(
 
 /** RGB little endian (bgr in memory) to J400. */
 export function RGB24ToJ400(
-    src_rgb24: Uint8Array,
+    src_rgb24: DataBuffer,
     src_stride_rgb24: number,
-    dst_yj: Uint8Array,
+    dst_yj: DataBuffer,
     dst_stride_yj: number,
     width: number,
     height: number
@@ -2143,9 +2145,9 @@ export function RGB24ToJ400(
 
 /** RGB big endian (rgb in memory) to J400. */
 export function RAWToJ400(
-    src_raw: Uint8Array,
+    src_raw: DataBuffer,
     src_stride_raw: number,
-    dst_yj: Uint8Array,
+    dst_yj: DataBuffer,
     dst_stride_yj: number,
     width: number,
     height: number
@@ -2156,13 +2158,13 @@ export function RAWToJ400(
 //  * dst_width/height for clipping determine final size. 
 //  */
 // export function MJPGToI420(
-//     sample: Uint8Array,
+//     sample: DataBuffer,
 //     sample_size: number,
-//     dst_y: Uint8Array,
+//     dst_y: DataBuffer,
 //     dst_stride_y: number,
-//     dst_u: Uint8Array,
+//     dst_u: DataBuffer,
 //     dst_stride_u: number,
-//     dst_v: Uint8Array,
+//     dst_v: DataBuffer,
 //     dst_stride_v: number,
 //     src_width: number,
 //     src_height: number,
@@ -2172,11 +2174,11 @@ export function RAWToJ400(
 
 // /** JPEG to NV21 */
 // export function MJPGToNV21(
-//     sample: Uint8Array,
+//     sample: DataBuffer,
 //     sample_size: number,
-//     dst_y: Uint8Array,
+//     dst_y: DataBuffer,
 //     dst_stride_y: number,
-//     dst_vu: Uint8Array,
+//     dst_vu: DataBuffer,
 //     dst_stride_vu: number,
 //     src_width: number,
 //     src_height: number,
@@ -2186,7 +2188,7 @@ export function RAWToJ400(
 
 // /** Query size of MJPG in pixels. */
 // export function MJPGSize(
-//     sample: Uint8Array,
+//     sample: DataBuffer,
 //     sample_size: number,
 //     width: Int32Array,
 //     height: Int32Array
@@ -2217,13 +2219,13 @@ export function RAWToJ400(
  * Returns 0 for successful; -1 for invalid parameter. Non-zero for failure.
  */
 export function ConvertToI420(
-    sample: Uint8Array,
+    sample: DataBuffer,
     sample_size: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     crop_x: number,
     crop_y: number,
@@ -2312,9 +2314,9 @@ export function CpuId(info_eax: number, info_ecx: number, cpu_info: Int32Array):
 
 // Rotate ARGB frame
 export function ARGBRotate(
-    src_argb: Uint8Array,
+    src_argb: DataBuffer,
     src_stride_argb: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     src_width: number,
     src_height: number,
@@ -2326,17 +2328,17 @@ export function ARGBRotate(
 
 // Rotate I420 frame.
 export function I420Rotate(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number,
@@ -2345,17 +2347,17 @@ export function I420Rotate(
 
 // Rotate I444 frame.
 export function I444Rotate(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number,
@@ -2364,15 +2366,15 @@ export function I444Rotate(
 
 // Rotate NV12 input and store in I420.
 export function NV12ToI420Rotate(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_uv: Uint8Array,
+    src_uv: DataBuffer,
     src_stride_uv: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     width: number,
     height: number,
@@ -2381,9 +2383,9 @@ export function NV12ToI420Rotate(
 
 // Rotate a plane by 0, 90, 180, or 270.
 export function RotatePlane(
-    src: Uint8Array,
+    src: DataBuffer,
     src_stride: number,
-    dst: Uint8Array,
+    dst: DataBuffer,
     dst_stride: number,
     width: number,
     height: number,
@@ -2392,25 +2394,25 @@ export function RotatePlane(
 
 // Rotate planes by 90, 180, 270. Deprecated.
 export function RotatePlane90(
-    src: Uint8Array,
+    src: DataBuffer,
     src_stride: number,
-    dst: Uint8Array,
+    dst: DataBuffer,
     dst_stride: number,
     width: number,
     height: number): void;
 
 export function RotatePlane180(
-    src: Uint8Array,
+    src: DataBuffer,
     src_stride: number,
-    dst: Uint8Array,
+    dst: DataBuffer,
     dst_stride: number,
     width: number,
     height: number): void;
 
 export function RotatePlane270(
-    src: Uint8Array,
+    src: DataBuffer,
     src_stride: number,
-    dst: Uint8Array,
+    dst: DataBuffer,
     dst_stride: number,
     width: number,
     height: number): void;
@@ -2420,31 +2422,31 @@ export function RotatePlane270(
 // split the data into two buffers while
 // rotating them. Deprecated.
 export function RotateUV90(
-    src: Uint8Array,
+    src: DataBuffer,
     src_stride: number,
-    dst_a: Uint8Array,
+    dst_a: DataBuffer,
     dst_stride_a: number,
-    dst_b: Uint8Array,
+    dst_b: DataBuffer,
     dst_stride_b: number,
     width: number,
     height: number): void;
 
 export function RotateUV180(
-    src: Uint8Array,
+    src: DataBuffer,
     src_stride: number,
-    dst_a: Uint8Array,
+    dst_a: DataBuffer,
     dst_stride_a: number,
-    dst_b: Uint8Array,
+    dst_b: DataBuffer,
     dst_stride_b: number,
     width: number,
     height: number): void;
 
 export function RotateUV270(
-    src: Uint8Array,
+    src: DataBuffer,
     src_stride: number,
-    dst_a: Uint8Array,
+    dst_a: DataBuffer,
     dst_stride_a: number,
-    dst_b: Uint8Array,
+    dst_b: DataBuffer,
     dst_stride_b: number,
     width: number,
     height: number): void;
@@ -2454,19 +2456,19 @@ export function RotateUV270(
 // order will result in a rotation by +- 90 degrees.
 // Deprecated.
 export function TransposePlane(
-    src: Uint8Array,
+    src: DataBuffer,
     src_stride: number,
-    dst: Uint8Array,
+    dst: DataBuffer,
     dst_stride: number,
     width: number,
     height: number): void;
 
 export function TransposeUV(
-    src: Uint8Array,
+    src: DataBuffer,
     src_stride: number,
-    dst_a: Uint8Array,
+    dst_a: DataBuffer,
     dst_stride_a: number,
-    dst_b: Uint8Array,
+    dst_b: DataBuffer,
     dst_stride_b: number,
     width: number,
     height: number): void;
@@ -2477,11 +2479,11 @@ export function TransposeUV(
 
 
 export function ARGBScale(
-    src_argb: Uint8Array,
+    src_argb: DataBuffer,
     src_stride_argb: number,
     src_width: number,
     src_height: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     dst_width: number,
     dst_height: number,
@@ -2490,11 +2492,11 @@ export function ARGBScale(
 
 /** Clipped scale takes destination rectangle coordinates for clip values. */
 export function ARGBScaleClip(
-    src_argb: Uint8Array,
+    src_argb: DataBuffer,
     src_stride_argb: number,
     src_width: number,
     src_height: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     dst_width: number,
     dst_height: number,
@@ -2507,16 +2509,16 @@ export function ARGBScaleClip(
 
 /** Scale with YUV conversion to ARGB and clipping. */
 export function YUVToARGBScaleClip(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
     src_fourcc: number,
     src_width: number,
     src_height: number,
-    dst_argb: Uint8Array,
+    dst_argb: DataBuffer,
     dst_stride_argb: number,
     dst_fourcc: number,
     dst_width: number,
@@ -2534,11 +2536,11 @@ export function YUVToARGBScaleClip(
 
 // Scale a YUV plane.
 export function ScalePlane(
-    src: Uint8Array,
+    src: DataBuffer,
     src_stride: number,
     src_width: number,
     src_height: number,
-    dst: Uint8Array,
+    dst: DataBuffer,
     dst_stride: number,
     dst_width: number,
     dst_height: number,
@@ -2568,19 +2570,19 @@ export function ScalePlane_16(
 // Returns 0 if successful.
 
 export function I420Scale(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
     src_width: number,
     src_height: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     dst_width: number,
     dst_height: number,
@@ -2618,19 +2620,19 @@ export function I420Scale_16(
 // Returns 0 if successful.
 
 export function I444Scale(
-    src_y: Uint8Array,
+    src_y: DataBuffer,
     src_stride_y: number,
-    src_u: Uint8Array,
+    src_u: DataBuffer,
     src_stride_u: number,
-    src_v: Uint8Array,
+    src_v: DataBuffer,
     src_stride_v: number,
     src_width: number,
     src_height: number,
-    dst_y: Uint8Array,
+    dst_y: DataBuffer,
     dst_stride_y: number,
-    dst_u: Uint8Array,
+    dst_u: DataBuffer,
     dst_stride_u: number,
-    dst_v: Uint8Array,
+    dst_v: DataBuffer,
     dst_stride_v: number,
     dst_width: number,
     dst_height: number,
@@ -2659,17 +2661,17 @@ export function I444Scale_16(
 
 // Legacy API.  Deprecated.
 export function Scale(
-    src_y: Uint8Array,
-    src_u: Uint8Array,
-    src_v: Uint8Array,
+    src_y: DataBuffer,
+    src_u: DataBuffer,
+    src_v: DataBuffer,
     src_stride_y: number,
     src_stride_u: number,
     src_stride_v: number,
     src_width: number,
     src_height: number,
-    dst_y: Uint8Array,
-    dst_u: Uint8Array,
-    dst_v: Uint8Array,
+    dst_y: DataBuffer,
+    dst_u: DataBuffer,
+    dst_v: DataBuffer,
     dst_stride_y: number,
     dst_stride_u: number,
     dst_stride_v: number,
