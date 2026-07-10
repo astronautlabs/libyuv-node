@@ -184,7 +184,7 @@ static Napi::Object Init(Napi::Env env, Napi::Object exports) {
     exports.Set("InitCpuFlags", Napi::Function::New(env, InitCpuFlags));
     exports.Set("TestCpuFlag", Napi::Function::New(env, TestCpuFlag));
     exports.Set("ArmCpuCaps", Napi::Function::New(env, ArmCpuCaps));
-    exports.Set("MipsCpuCaps", Napi::Function::New(env, MipsCpuCaps));
+    exports.Set("RiscvCpuCaps", Napi::Function::New(env, RiscvCpuCaps));
     exports.Set("MaskCpuFlags", Napi::Function::New(env, MaskCpuFlags));
     exports.Set("SetCpuFlags", Napi::Function::New(env, SetCpuFlags));
     exports.Set("CpuId", Napi::Function::New(env, CpuId));

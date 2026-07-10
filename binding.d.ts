@@ -2271,7 +2271,7 @@ export function TestCpuFlag(test_flag: number): number;
  * Internal function for parsing /proc/cpuinfo.
  */
 export function ArmCpuCaps(cpuinfo_name: string): number;
-export function MipsCpuCaps(cpuinfo_name: string): number;
+export function RiscvCpuCaps(cpuinfo_name: string): number;
 
 /**
  * For testing, allow CPU flags to be disabled.
