@@ -14,10 +14,6 @@ commands:
     steps:
       - run: choco install cmake -y
       - run: choco install wget -y
-      - run:
-          command: wget https://nodejs.org/dist/v18.20.8/node-v18.20.8-x64.msi -P C:\Users\circleci\Downloads\
-          shell: cmd.exe
-      - run: MsiExec.exe /i C:\Users\circleci\Downloads\node-v18.20.8-x64.msi /qn
       - run_tests:
           version: << parameters.version >>
           os: "windows"
@@ -51,7 +47,7 @@ commands:
           key: v2-dependencies-<< parameters.os >>-<< parameters.version >>-{{ checksum "package.json" }}
       - run: npm test
 jobs:
-  windows-node-18:
+  windows-node-26:
     executor:
       name: win/default
       size: medium
@@ -83,7 +79,7 @@ jobs:
 workflows:
   build:
     jobs:
-      - windows-node-18
+      - windows-node-26
       - linux-node-26
       - linux-node-22
       - linux-node-18
