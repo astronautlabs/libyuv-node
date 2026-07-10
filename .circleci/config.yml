@@ -3,7 +3,7 @@
 version: 2.1
 
 orbs:
-  win: circleci/windows@2.2.0
+  win: circleci/windows@5.1.1
 
 commands:
   run_tests_windows:
@@ -12,7 +12,12 @@ commands:
       version:
         type: string
     steps:
-      - run: choco install cmake
+      - run: choco install cmake -y
+      - run: choco install wget -y
+      - run:
+          command: wget https://nodejs.org/dist/v18.20.8/node-v18.20.8-x64.msi -P C:\Users\circleci\Downloads\
+          shell: cmd.exe
+      - run: MsiExec.exe /i C:\Users\circleci\Downloads\node-v18.20.8-x64.msi /qn
       - run_tests:
           version: << parameters.version >>
           os: "windows"
@@ -55,21 +60,21 @@ jobs:
           version: "18"
   linux-node-26:
     docker:
-      - image: circleci/node:26
+      - image: cimg/node:26.5
     working_directory: ~/repo
     steps:
       - run_tests_linux:
           version: "14"
   linux-node-22:
     docker:
-      - image: circleci/node:22
+      - image: cimg/node:22.23
     working_directory: ~/repo
     steps:
       - run_tests_linux:
           version: "12"
   linux-node-18:
     docker:
-      - image: circleci/node:18
+      - image: cimg/node:18.20
     working_directory: ~/repo
     steps:
       - run_tests_linux:
