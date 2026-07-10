@@ -60,6 +60,20 @@
                 [
                     'OS=="win"', 
                     {
+                        "target_defaults": {
+                            "configurations": {
+                                "Release": {
+                                    "msvs_settings": {
+                                        "VCLibrarianTool": {
+                                            "AdditionalOptions!": [ "/LTCG:INCREMENTAL", "/LTCG" ]
+                                        },
+                                        "VCLinkerTool": {
+                                            "AdditionalOptions!": [ "/LTCG:INCREMENTAL", "/LTCG" ]
+                                        }
+                                    }
+                                }
+                            }
+                        },
                         "configurations": {
                             "Release": {
                                 "msvs_settings": {
