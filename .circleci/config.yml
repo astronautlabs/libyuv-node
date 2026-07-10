@@ -46,48 +46,39 @@ commands:
           key: v1-dependencies-<< parameters.os >>-<< parameters.version >>-{{ checksum "package.json" }}
       - run: npm test
 jobs:
-  windows-node-12:
+  windows-node-18:
     executor:
       name: win/default
       size: medium
     steps:
       - run_tests_windows:
-          version: "12"
-  linux-node-14:
+          version: "18"
+  linux-node-26:
     docker:
-      - image: circleci/node:14
+      - image: circleci/node:26
     working_directory: ~/repo
     steps:
       - run_tests_linux:
           version: "14"
-  linux-node-12:
+  linux-node-22:
     docker:
-      - image: circleci/node:12
+      - image: circleci/node:22
     working_directory: ~/repo
     steps:
       - run_tests_linux:
           version: "12"
-  linux-node-10:
+  linux-node-18:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:18
     working_directory: ~/repo
     steps:
       - run_tests_linux:
           version: "10"
-  linux-node-8:
-    docker:
-      - image: circleci/node:8
-    working_directory: ~/repo
-    steps:
-      - run_tests_linux:
-          version: "8"
 
 workflows:
-  version: 2
   build:
     jobs:
-      - windows-node-12
-      - linux-node-14
-      - linux-node-12
-      - linux-node-10
-      - linux-node-8
+      - windows-node-18
+      - linux-node-26
+      - linux-node-22
+      - linux-node-18
