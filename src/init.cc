@@ -202,11 +202,11 @@ static Napi::Object Init(Napi::Env env, Napi::Object exports) {
     exports.Set("RotatePlane90", Napi::Function::New(env, RotatePlane90));
     exports.Set("RotatePlane180", Napi::Function::New(env, RotatePlane180));
     exports.Set("RotatePlane270", Napi::Function::New(env, RotatePlane270));
-    exports.Set("RotateUV90", Napi::Function::New(env, RotateUV90));
-    exports.Set("RotateUV180", Napi::Function::New(env, RotateUV180));
-    exports.Set("RotateUV270", Napi::Function::New(env, RotateUV270));
+    exports.Set("SplitRotateUV90", Napi::Function::New(env, SplitRotateUV90));
+    exports.Set("SplitRotateUV180", Napi::Function::New(env, SplitRotateUV180));
+    exports.Set("SplitRotateUV270", Napi::Function::New(env, SplitRotateUV270));
     exports.Set("TransposePlane", Napi::Function::New(env, TransposePlane));
-    exports.Set("TransposeUV", Napi::Function::New(env, TransposeUV));
+    exports.Set("SplitTransposeUV", Napi::Function::New(env, SplitTransposeUV));
 
     // scale_argb.h
 

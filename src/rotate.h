@@ -32,22 +32,18 @@ Napi::Value RotatePlane(const Napi::CallbackInfo& info);
  * Rotate planes by 90, 180, 270. Deprecated.
  */
 Napi::Value RotatePlane90(const Napi::CallbackInfo& info);
-
 Napi::Value RotatePlane180(const Napi::CallbackInfo& info);
-
 Napi::Value RotatePlane270(const Napi::CallbackInfo& info);
 
-/**
- * Rotations for when U and V are interleaved.
- * These functions take one input pointer and
- * split the data into two buffers while
- * rotating them. Deprecated.
- */
-Napi::Value RotateUV90(const Napi::CallbackInfo& info);
 
-Napi::Value RotateUV180(const Napi::CallbackInfo& info);
-
-Napi::Value RotateUV270(const Napi::CallbackInfo& info);
+// Rotations for when U and V are interleaved.
+// These functions take one UV input pointer and
+// split the data into two buffers while
+// rotating them.
+// width and height expected to be half size for NV12.
+Napi::Value SplitRotateUV90(const Napi::CallbackInfo& info);
+Napi::Value SplitRotateUV180(const Napi::CallbackInfo& info);
+Napi::Value SplitRotateUV270(const Napi::CallbackInfo& info);
 
 /**
  * The 90 and 270 functions are based on transposes.
@@ -57,4 +53,4 @@ Napi::Value RotateUV270(const Napi::CallbackInfo& info);
  */
 Napi::Value TransposePlane(const Napi::CallbackInfo& info);
 
-Napi::Value TransposeUV(const Napi::CallbackInfo& info);
+Napi::Value SplitTransposeUV(const Napi::CallbackInfo& info);

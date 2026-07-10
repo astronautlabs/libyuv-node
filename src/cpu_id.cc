@@ -16,9 +16,9 @@ Napi::Value ArmCpuCaps(const Napi::CallbackInfo& callback) {
     return Napi::Number::New(callback.Env(), libyuv::ArmCpuCaps(cpuinfo_name.c_str()));
 }
 
-Napi::Value MipsCpuCaps(const Napi::CallbackInfo& callback) {
+Napi::Value RiscvCpuCaps(const Napi::CallbackInfo& callback) {
     auto cpuinfo_name = callback[0].As<Napi::String>().Utf8Value();
-    return Napi::Number::New(callback.Env(), libyuv::MipsCpuCaps(cpuinfo_name.c_str()));
+    return Napi::Number::New(callback.Env(), libyuv::RiscvCpuCaps(cpuinfo_name.c_str()));
 }
 
 Napi::Value MaskCpuFlags(const Napi::CallbackInfo& callback) {

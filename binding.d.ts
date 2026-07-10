@@ -2418,10 +2418,11 @@ export function RotatePlane270(
     height: number): void;
 
 // Rotations for when U and V are interleaved.
-// These functions take one input pointer and
+// These functions take one UV input pointer and
 // split the data into two buffers while
-// rotating them. Deprecated.
-export function RotateUV90(
+// rotating them.
+// width and height expected to be half size for NV12.
+export function SplitRotateUV90(
     src: DataBuffer,
     src_stride: number,
     dst_a: DataBuffer,
@@ -2431,7 +2432,7 @@ export function RotateUV90(
     width: number,
     height: number): void;
 
-export function RotateUV180(
+export function SplitRotateUV180(
     src: DataBuffer,
     src_stride: number,
     dst_a: DataBuffer,
@@ -2441,7 +2442,7 @@ export function RotateUV180(
     width: number,
     height: number): void;
 
-export function RotateUV270(
+export function SplitRotateUV270(
     src: DataBuffer,
     src_stride: number,
     dst_a: DataBuffer,
@@ -2463,7 +2464,7 @@ export function TransposePlane(
     width: number,
     height: number): void;
 
-export function TransposeUV(
+export function SplitTransposeUV(
     src: DataBuffer,
     src_stride: number,
     dst_a: DataBuffer,
