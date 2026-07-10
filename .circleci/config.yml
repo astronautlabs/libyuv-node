@@ -42,13 +42,13 @@ commands:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-<< parameters.os >>-<< parameters.version >>-{{ checksum "package.json" }}
-          - v1-dependencies-<< parameters.os >>-<< parameters.version >>-
+          - v2-dependencies-<< parameters.os >>-<< parameters.version >>-{{ checksum "package.json" }}
+          - v2-dependencies-<< parameters.os >>-<< parameters.version >>-
       - run: npm install
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-<< parameters.os >>-<< parameters.version >>-{{ checksum "package.json" }}
+          key: v2-dependencies-<< parameters.os >>-<< parameters.version >>-{{ checksum "package.json" }}
       - run: npm test
 jobs:
   windows-node-18:
