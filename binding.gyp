@@ -60,31 +60,19 @@
                 [
                     'OS=="win"', 
                     {
-                        "target_defaults": {
-                            "configurations": {
-                                "Release": {
-                                    "msvs_settings": {
-                                        "VCLibrarianTool": {
-                                            "AdditionalOptions!": [ "/LTCG:INCREMENTAL", "/LTCG" ]
-                                        },
-                                        "VCLinkerTool": {
-                                            "AdditionalOptions!": [ "/LTCG:INCREMENTAL", "/LTCG" ]
-                                        }
-                                    }
-                                }
-                            }
-                        },
                         "configurations": {
                             "Release": {
                                 "msvs_settings": {
                                     "VCCLCompilerTool": {
                                         "RuntimeTypeInfo": "true",
                                         "ExceptionHandling": 1,
+                                        "AdditionalOptions!": [ "-flto=thin" ],
                                         'AdditionalOptions': [ ],
                                         'RuntimeLibrary': 3
                                     },
                                     'VCLinkerTool': {
                                         'AdditionalOptions': [ '/NODEFAULTLIB:MSVCRT' ],
+                                        "AdditionalOptions!": [ "/LTCG:INCREMENTAL", "/LTCG", "-flto=thin", "/opt:lldltojobs=2" ]
                                     },
                                 }
                             }
